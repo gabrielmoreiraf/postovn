@@ -145,7 +145,7 @@ export function Hero() {
           </div>
           <div className="pointer-events-none absolute bottom-3 left-3 flex items-center gap-1.5 rounded-full bg-brand-blue-darker/90 px-3 py-1.5 text-xs font-bold text-white backdrop-blur">
             <MapPin size={12} className="text-brand-yellow" />
-            Nossa unidade em {siteConfig.address.neighborhood}
+            Nossa unidade no Bairro {siteConfig.address.neighborhood}
           </div>
         </motion.div>
       </div>

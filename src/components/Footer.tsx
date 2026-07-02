@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site-config";
 
 const NAV_LINKS = [
   { href: "#combustiveis", label: "Combustíveis" },
-  { href: "#conveniencia", label: "Loja de conveniência" },
+  { href: "#conveniencia", label: "Conveniência" },
   { href: "#pousada", label: "Pousada" },
   { href: "#painel-led", label: "Anuncie no painel" },
   { href: "#faq", label: "Dúvidas frequentes" },

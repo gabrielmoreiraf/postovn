@@ -43,8 +43,7 @@ export const siteConfig = {
       "Frigobar",
       "Televisão",
     ],
-    // TODO: confirme o WhatsApp da pousada (hoje usando 85 9111-2552).
-    whatsapp: "558591112552",
+    whatsapp: "558581663728",
     whatsappMessage:
       "Olá! Vim pelo site do Posto VN e gostaria de fazer uma reserva na Pousada VN.",
     cta: "Reservar pelo WhatsApp",
@@ -96,6 +95,22 @@ export const siteConfig = {
         name: "Ofertas da semana",
         desc: "Promoções toda semana em bebidas e conveniência",
       },
+    ],
+  },
+
+  convenios: {
+    title: "Aceitamos pagamento por convênio com empresa",
+    subtitle:
+      "Agora ficou fácil abastecer o seu veículo, é só passar o cartão do seu convênio.",
+    label: "Cartões aceitos",
+    cards: [
+      { name: "Good Card", src: "/good.png" },
+      { name: "Ticket Log", src: "/tickect.png" },
+      { name: "NEO", src: "/neo.jpg" },
+      { name: "FitCard", src: "/fitcard.png" },
+      { name: "Vale Card", src: "/valecard.webp" },
+      { name: "Prime", src: "/prime.png" },
+      { name: "Link Card", src: "/lnk.png" },
     ],
   },
 

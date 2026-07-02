@@ -8,7 +8,7 @@ import { Logo } from "./Logo";
 const NAV_LINKS = [
   { href: "#top", id: "top", label: "Início" },
   { href: "#combustiveis", id: "combustiveis", label: "Combustíveis" },
-  { href: "#conveniencia", id: "conveniencia", label: "Loja" },
+  { href: "#conveniencia", id: "conveniencia", label: "Conveniência" },
   { href: "#pousada", id: "pousada", label: "Pousada" },
   { href: "#painel-led", id: "painel-led", label: "Anuncie" },
   { href: "#localizacao", id: "localizacao", label: "Localização" },

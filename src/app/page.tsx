@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Diferenciais } from "@/components/Diferenciais";
 import { Combustiveis } from "@/components/Combustiveis";
+import { Convenios } from "@/components/Convenios";
 import { Conveniencia } from "@/components/Conveniencia";
 import { Pousada } from "@/components/Pousada";
 import { PainelLed } from "@/components/PainelLed";
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <Diferenciais />
         <Combustiveis />
+        <Convenios />
         <Conveniencia />
         <Pousada />
         <PainelLed />
