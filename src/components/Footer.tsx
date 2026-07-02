@@ -83,7 +83,12 @@ export function Footer() {
           <p>
             Desenvolvido por{" "}
             <a
-              href="https://www.linkedin.com/in/gabrielmoreirace/"              className="font-semibold text-white/70 underline-offset-4 transition hover:text-brand-yellow hover:underline"
+              href={`https://wa.me/5585991451268?text=${encodeURIComponent(
+                "Oi Gabriel! Vi o site do Posto VN e gostei muito. Fiquei interessado em ter um site assim, como funciona?"
+              )}`}
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-white/70 underline-offset-4 transition hover:text-brand-yellow hover:underline"
             >
               Gabriel Moreira
             </a>
