@@ -1,14 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Clock, Phone } from "lucide-react";
+import { MapPin, Clock } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
+import { InstagramIcon } from "./SocialIcons";
 
 export function Localizacao() {
-  const whatsappHref = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(
-    siteConfig.contact.whatsappMessage
-  )}`;
-
   return (
     <section id="localizacao" className="relative bg-white py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -56,20 +53,12 @@ export function Localizacao() {
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-yellow text-brand-blue-darker">
-                <Phone size={20} />
-              </div>
-              <div>
-                <p className="font-semibold">Contato</p>
-                <p className="mt-1 text-sm text-white/85">{siteConfig.contact.whatsappDisplay}</p>
-              </div>
-            </div>
-
             <a
-              href={whatsappHref}              className="mt-2 w-fit rounded-full bg-brand-yellow px-6 py-3 text-sm font-bold text-brand-blue-darker shadow-lg transition hover:scale-105 active:scale-95"
+              href={siteConfig.social.instagram}
+              className="mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-brand-yellow px-6 py-3 text-sm font-bold text-brand-blue-darker shadow-lg transition hover:scale-105 active:scale-95"
             >
-              Chamar no WhatsApp
+              <InstagramIcon size={17} />
+              Fale com a gente no Instagram
             </a>
           </motion.div>
 

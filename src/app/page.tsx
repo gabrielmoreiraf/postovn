@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { Diferenciais } from "@/components/Diferenciais";
 import { Combustiveis } from "@/components/Combustiveis";
 import { Conveniencia } from "@/components/Conveniencia";
+import { Pousada } from "@/components/Pousada";
 import { PainelLed } from "@/components/PainelLed";
 import { Faq } from "@/components/Faq";
 import { Localizacao } from "@/components/Localizacao";
@@ -17,6 +18,7 @@ export default function Home() {
         <Diferenciais />
         <Combustiveis />
         <Conveniencia />
+        <Pousada />
         <PainelLed />
         <Faq />
         <Localizacao />

@@ -27,12 +27,38 @@
 
 html {
   scroll-behavior: smooth;
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--brand-blue) transparent;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Scrollbar personalizada (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: color-mix(in srgb, var(--brand-blue-darker) 8%, transparent);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--brand-blue), var(--brand-blue-darker));
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(var(--brand-yellow), var(--brand-yellow-dark));
+  border: 3px solid transparent;
+  background-clip: padding-box;
 }
 
 .font-display {

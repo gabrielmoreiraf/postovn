@@ -19,15 +19,9 @@ export const siteConfig = {
       "https://www.google.com/maps/search/?api=1&query=Rua+Jos%C3%A9+Veloso+Juc%C3%A1,+2986+-+Palestina,+Canind%C3%A9+-+CE",
   },
 
-  contact: {
-    whatsapp: "558591112552",
-    whatsappDisplay: "(85) 9111-2552",
-    whatsappMessage: "Olá! Vim pelo site do Posto VN e gostaria de saber mais.",
-  },
-
   hours: {
     label: "Aberto todos os dias, 24 horas",
-    detail: "Loja de conveniência: 06h às 23h",
+    detail: "Loja de conveniência: 07h às 21h",
   },
 
   // Selos de confiança exibidos no Hero.
@@ -37,6 +31,33 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/postovnce/",
   },
 
+  pousada: {
+    badge: "Também temos hospedagem",
+    title: "Pousada VN",
+    subtitle:
+      "Quartos novos, limpos e aconchegantes bem ao lado do posto, a parada perfeita pra quem está de passagem por Canindé.",
+    features: [
+      "Quarto climatizado",
+      "Estacionamento",
+      "Wi-Fi",
+      "Frigobar",
+      "Televisão",
+    ],
+    // TODO: confirme o WhatsApp da pousada (hoje usando 85 9111-2552).
+    whatsapp: "558591112552",
+    whatsappMessage:
+      "Olá! Vim pelo site do Posto VN e gostaria de fazer uma reserva na Pousada VN.",
+    cta: "Reservar pelo WhatsApp",
+    photos: [
+      { src: "/DSC_1300.JPG.jpeg", alt: "Recepção da Pousada VN" },
+      { src: "/DSC_1317.JPG.jpeg", alt: "Quarto da Pousada VN" },
+      { src: "/DSC_1302.JPG.jpeg", alt: "Quarto amplo da Pousada VN" },
+      { src: "/DSC_1303.JPG.jpeg", alt: "Acomodação da Pousada VN" },
+      { src: "/DSC_1308.JPG.jpeg", alt: "Ambiente da Pousada VN" },
+      { src: "/DSC_1318.JPG.jpeg", alt: "Detalhe da Pousada VN" },
+    ],
+  },
+
   fuels: [
     {
       name: "Gasolina Comum",
@@ -44,19 +65,14 @@ export const siteConfig = {
       color: "brand-yellow",
     },
     {
-      name: "Gasolina Aditivada",
-      note: "Proteção extra para o motor e mais autonomia",
-      color: "brand-blue",
-    },
-    {
       name: "Etanol",
       note: "Combustível renovável, leve no bolso",
-      color: "brand-yellow",
+      color: "brand-blue",
     },
     {
       name: "Diesel S10",
       note: "Potência e baixo teor de enxofre para sua frota",
-      color: "brand-blue",
+      color: "brand-yellow",
     },
   ],
 
@@ -84,24 +100,52 @@ export const siteConfig = {
   },
 
   ledPanel: {
+    badge: "Espaço publicitário",
     title: "Anuncie no nosso painel de LED",
     subtitle:
-      "Além de combustível, alugamos espaço no telão de LED do posto para divulgar sua empresa para quem passa por Palestina.",
-    bullets: [
-      {
-        title: "Alta visibilidade",
-        desc: "Painel grande, visível de longe, dia e noite.",
-      },
-      {
-        title: "Fluxo constante",
-        desc: "Centenas de carros e motos passam pelo posto todos os dias.",
-      },
-      {
-        title: "Contrato flexível",
-        desc: "Planos avulsos ou mensais, sob medida para o seu negócio.",
-      },
+      "Um ponto estratégico de grande circulação no Bairro Palestina. Coloque a sua marca na frente de milhares de pessoas todos os dias.",
+
+    location: {
+      title: "Nosso ponto de exibição",
+      text: "Localizado na Avenida José Veloso Jucá, 2986, em um ponto estratégico de grande circulação, próximo à estátua. Painel vertical de 1,5 x 3m, com exibição frente e verso, garantindo máxima visibilidade ao longo do dia,principalmente nos horários de pico.",
+    },
+
+    // Destaques rápidos do formato do anúncio.
+    adFacts: [
+      { value: "15s", label: "Vídeo por anúncio" },
+      { value: "~300", label: "Exibições por dia" },
+      { value: "2 lados", label: "Frente e verso" },
     ],
+
+    reasons: {
+      title: "Por que anunciar aqui?",
+      items: [
+        {
+          title: "Localização estratégica",
+          desc: "Ponto de alto fluxo diário, à beira da avenida e perto da estátua.",
+        },
+        {
+          title: "Exibição frequente",
+          desc: "Seu vídeo roda o dia todo, reforçando a sua marca a cada passagem.",
+        },
+        {
+          title: "Ótimo custo-benefício",
+          desc: "Visibilidade real por um valor que cabe no bolso do seu negócio.",
+        },
+      ],
+    },
+
+    specs: {
+      title: "Especificações do painel",
+      items: [
+        "Resolução: 1500 x 3000 px",
+        "Formato vertical (1,5m largura × 3m altura)",
+        "Exibição frente e verso",
+      ],
+    },
+
     cta: "Quero anunciar no painel",
+    whatsapp: "558591112552",
     whatsappMessage:
       "Olá! Vi que o Posto VN aluga espaço no painel de LED e quero saber mais sobre como anunciar minha empresa.",
   },
@@ -109,7 +153,7 @@ export const siteConfig = {
   highlights: [
     { value: "24h", label: "Funcionamento" },
     { value: "100%", label: "Bombas aferidas" },
-    { value: "4", label: "Tipos de combustível" },
+    { value: "3", label: "Tipos de combustível" },
     { value: "5★", label: "Atendimento" },
   ],
 
@@ -119,7 +163,7 @@ export const siteConfig = {
     items: [
       {
         q: "O posto funciona 24 horas mesmo?",
-        a: "Sim! As bombas ficam abertas todos os dias, 24 horas por dia. A loja de conveniência funciona das 06h às 23h.",
+        a: "Sim! As bombas ficam abertas todos os dias, 24 horas por dia. A loja de conveniência funciona das 07h às 21h.",
       },
       {
         q: "Quais formas de pagamento vocês aceitam?",
@@ -127,11 +171,11 @@ export const siteConfig = {
       },
       {
         q: "Quais combustíveis estão disponíveis?",
-        a: "Gasolina comum, gasolina aditivada, etanol e diesel S10 — todos de procedência e com bombas aferidas.",
+        a: "Gasolina comum, etanol e diesel S10 — todos de procedência e com bombas aferidas.",
       },
       {
         q: "Como faço para anunciar no painel de LED?",
-        a: "É só chamar a gente no WhatsApp. Temos planos avulsos e mensais, sob medida para o seu negócio aparecer para quem passa por Palestina.",
+        a: "É só chamar a gente no direct do Instagram. Temos planos avulsos e mensais, sob medida para o seu negócio aparecer para quem passa por Palestina.",
       },
       {
         q: "Onde fica o posto?",

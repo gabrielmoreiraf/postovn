@@ -2,15 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { MapPin, Check } from "lucide-react";
+import { MapPin, Check, BedDouble } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
-import { WhatsAppIcon } from "./SocialIcons";
 
 export function Hero() {
-  const whatsappHref = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(
-    siteConfig.contact.whatsappMessage
-  )}`;
-
   const photoAlt = `Fachada do ${siteConfig.name} em ${siteConfig.address.neighborhood}, ${siteConfig.address.city}/${siteConfig.address.state}`;
 
   return (
@@ -101,17 +96,18 @@ export function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-9 flex flex-wrap gap-4"
+            className="mt-9 flex flex-col gap-3 sm:flex-row sm:gap-4"
           >
             <a
-              href={whatsappHref}              className="inline-flex items-center gap-2.5 rounded-full bg-brand-yellow px-7 py-3.5 text-sm font-bold text-brand-blue-darker shadow-lg shadow-black/25 transition hover:scale-105 hover:brightness-105 active:scale-95"
+              href="#pousada"
+              className="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-brand-yellow px-7 py-3.5 text-sm font-bold text-brand-blue-darker shadow-lg shadow-black/25 transition hover:scale-105 hover:brightness-105 active:scale-95 sm:w-56"
             >
-              <WhatsAppIcon size={18} />
-              Chamar no WhatsApp
+              <BedDouble size={18} />
+              Conheça a pousada
             </a>
             <a
               href="#localizacao"
-              className="inline-flex items-center gap-2.5 rounded-full border border-white/30 bg-white/5 px-7 py-3.5 text-sm font-bold text-white backdrop-blur transition hover:bg-white/15 active:scale-95"
+              className="inline-flex w-full items-center justify-center gap-2.5 rounded-full border border-white/30 bg-white/5 px-7 py-3.5 text-sm font-bold text-white backdrop-blur transition hover:bg-white/15 active:scale-95 sm:w-56"
             >
               <MapPin size={18} />
               Como chegar

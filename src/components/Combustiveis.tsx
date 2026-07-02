@@ -26,7 +26,7 @@ export function Combustiveis() {
           </p>
         </motion.div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-14 grid max-w-4xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {siteConfig.fuels.map((fuel, i) => (
             <FuelCard key={fuel.name} fuel={fuel} index={i} />
           ))}

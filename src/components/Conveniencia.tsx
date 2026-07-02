@@ -24,8 +24,9 @@ export function Conveniencia() {
               {siteConfig.store.subtitle}
             </h2>
             <p className="mt-4 text-slate-600">
-              Enquanto o carro abastece, aproveite pra tomar um café, pegar uma bebida gelada ou
-              conferir as ofertas da semana — tudo dentro do posto.
+              Enquanto o carro abastece, aproveite pra tomar um café, pegar uma
+              bebida gelada ou conferir as ofertas da semana, tudo dentro do
+              posto.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -50,7 +51,9 @@ export function Conveniencia() {
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                   whileHover={{ y: -6 }}
                   className={`group h-full rounded-2xl p-5 shadow-sm ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-xl ${
-                    i % 2 === 0 ? "bg-brand-blue text-white" : "bg-brand-yellow text-brand-blue-darker"
+                    i % 2 === 0
+                      ? "bg-brand-blue text-white"
+                      : "bg-brand-yellow text-brand-blue-darker"
                   }`}
                 >
                   <Icon
@@ -58,10 +61,14 @@ export function Conveniencia() {
                     strokeWidth={2.2}
                     className="transition-transform duration-300 group-hover:scale-110"
                   />
-                  <h3 className="mt-4 font-display text-base font-bold">{item.name}</h3>
+                  <h3 className="mt-4 font-display text-base font-bold">
+                    {item.name}
+                  </h3>
                   <p
                     className={`mt-1 text-xs ${
-                      i % 2 === 0 ? "text-white/85" : "text-brand-blue-darker/75"
+                      i % 2 === 0
+                        ? "text-white/85"
+                        : "text-brand-blue-darker/75"
                     }`}
                   >
                     {item.desc}
