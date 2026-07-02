@@ -2,25 +2,101 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #071233;
+
+  --brand-blue: #0034b0;
+  --brand-blue-dark: #001f6e;
+  --brand-blue-darker: #001143;
+  --brand-yellow: #ffc900;
+  --brand-yellow-dark: #e6ac00;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-blue-dark: var(--brand-blue-dark);
+  --color-brand-blue-darker: var(--brand-blue-darker);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-brand-yellow-dark: var(--brand-yellow-dark);
+
+  --font-display: var(--font-poppins);
+  --font-sans: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), sans-serif;
+}
+
+::selection {
+  background: var(--brand-yellow);
+  color: var(--brand-blue-darker);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 22s linear infinite;
+}
+
+/* Acessibilidade: respeita quem prefere menos movimento (config do sistema). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-marquee {
+    animation: none !important;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 3.2s linear infinite;
+}
+
+.road-dashes {
+  background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0 24px, transparent 24px 48px);
+  animation: road-dashes 1s linear infinite;
+}
+
+@keyframes road-dashes {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -48px;
+  }
 }
